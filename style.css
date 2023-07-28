@@ -1,0 +1,69 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+.conaineur{
+   width: 200px;
+   height: 200px;
+   
+
+}
+.cube{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+   margin: 100px auto 0;
+   animation: spin 5s infinite linear;
+   
+  
+}
+.item{
+  position:absolute;
+  width: 200px;
+  height: 200px;
+  
+}
+#top{
+  
+  transform: rotateX(90deg) translateZ(100px);
+  background-color: red;
+}
+#bottom{
+  
+  transform: rotateX(-90deg) translateZ(100px);
+  background-color: aqua;
+}
+#right{
+  
+  transform: rotateY(90deg) translateZ(100px);
+  background-color: black;
+}
+#left{
+  
+  transform: rotateY(-90deg) translateZ(100px);
+  background-color: aqua;
+}
+#Font{
+  
+  transform: rotateY(0deg) translateZ(100px);
+  background-color: aqua;
+}
+#Back{
+  
+  transform: rotateY(0deg) translateZ(100px);
+  background-color:purple;
+}
+
+@keyframes spin{
+  from{
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to{
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
